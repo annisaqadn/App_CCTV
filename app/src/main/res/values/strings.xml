@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CCTV</string>
+
+    <string-array name="area_cctv">
+        <item>Tugu Selamat Datang</item>
+        <item>Bunderan Siyono</item>
+        <item>Alun-Alun Wonosari</item>
+    </string-array>
+
+    <string-array name="kapanewon_cctv">
+        <item>Kapanewon Patuk</item>
+        <item>Kapanewon Playen</item>
+        <item>Kapanewon Wonosari</item>
+    </string-array>
+</resources>

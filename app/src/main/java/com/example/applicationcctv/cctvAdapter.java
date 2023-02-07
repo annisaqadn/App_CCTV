@@ -1,6 +1,8 @@
 package com.example.applicationcctv;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class cctvAdapter extends RecyclerView.Adapter<cctvAdapter.cctvViewHolder> {
@@ -32,10 +35,20 @@ public class cctvAdapter extends RecyclerView.Adapter<cctvAdapter.cctvViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull cctvViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull cctvViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.myText1.setText(data1[position]);
         holder.myText2.setText(data2[position]);
         holder.myImage.setImageResource(images[position]);
+
+        holder.mainLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, cctvView.class);
+                intent.putExtra("data1", data1[position]);
+                intent.putExtra("data2", data2[position]);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -47,11 +60,14 @@ public class cctvAdapter extends RecyclerView.Adapter<cctvAdapter.cctvViewHolder
 
         TextView myText1, myText2;
         ImageView myImage;
+        ConstraintLayout mainLayout;
+
         public cctvViewHolder(@NonNull View itemView) {
             super(itemView);
             myText1 = itemView.findViewById(R.id.textView);
             myText2 = itemView.findViewById(R.id.textView2);
             myImage = itemView.findViewById(R.id.imageView);
+            mainLayout = itemView.findViewById(R.id.mainLayout);
         }
     }
 }

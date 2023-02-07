@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/arrow.xml" value="0.194" />
         <entry key="app/src/main/res/drawable/bg_shape.xml" value="0.203" />
+        <entry key="app/src/main/res/drawable/circle_radius.xml" value="0.194" />
         <entry key="app/src/main/res/drawable/ic_baseline_calendar_today.xml" value="0.203" />
         <entry key="app/src/main/res/layout/activity_cctv_adapter.xml" value="0.21105072463768115" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.29583333333333334" />
-        <entry key="app/src/main/res/layout/my_row.xml" value="0.2594241377236186" />
+        <entry key="app/src/main/res/layout/activity_cctv_view.xml" value="0.2275299072265625" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3573257446289063" />
+        <entry key="app/src/main/res/layout/my_row.xml" value="0.1" />
       </map>
     </option>
   </component>

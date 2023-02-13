@@ -55,16 +55,16 @@
 
     </RelativeLayout>
 
-
     <com.google.android.exoplayer2.ui.PlayerView
-        android:id="@+id/exoplayer"
+        android:id="@+id/videoexoplayer"
         android:layout_width="match_parent"
         android:layout_height="230dp"
         android:foregroundGravity="center"
-        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

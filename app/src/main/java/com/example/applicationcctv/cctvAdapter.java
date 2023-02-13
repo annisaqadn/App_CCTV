@@ -10,19 +10,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class cctvAdapter extends RecyclerView.Adapter<cctvAdapter.cctvViewHolder> {
 
-    String data1[], data2[];
+    String data1[], data2[], data3[];
     int images[];
     Context context;
 
-    public cctvAdapter(Context ct, String s1[], String s2[], int img[]) {
+    public cctvAdapter(Context ct, String s1[], String s2[], String[] link, int img[]) {
         context = ct;
         data1 = s1;
         data2 = s2;
+        //data3 = link;
         images = img;
     }
 
@@ -40,12 +42,13 @@ public class cctvAdapter extends RecyclerView.Adapter<cctvAdapter.cctvViewHolder
         holder.myText2.setText(data2[position]);
         holder.myImage.setImageResource(images[position]);
 
-        holder.mainLayout.setOnClickListener(new View.OnClickListener() {
+        holder.myCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, cctvView.class);
                 intent.putExtra("data1", data1[position]);
                 intent.putExtra("data2", data2[position]);
+                //intent.putExtra("data3", data3[position]);
                 context.startActivity(intent);
             }
         });
@@ -60,14 +63,14 @@ public class cctvAdapter extends RecyclerView.Adapter<cctvAdapter.cctvViewHolder
 
         TextView myText1, myText2;
         ImageView myImage;
-        ConstraintLayout mainLayout;
+        CardView myCardView;
 
         public cctvViewHolder(@NonNull View itemView) {
             super(itemView);
             myText1 = itemView.findViewById(R.id.textView);
             myText2 = itemView.findViewById(R.id.textView2);
             myImage = itemView.findViewById(R.id.imageView);
-            mainLayout = itemView.findViewById(R.id.mainLayout);
+            myCardView = itemView.findViewById(R.id.cvCardView);
         }
     }
 }

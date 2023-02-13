@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView kalender;
     RecyclerView recyclerView;
-    String s1[], s2[];
+    String s1[], s2[], link[];
     int images[] = {R.drawable.alunalunwonosari, R.drawable.bunderansiyono, R.drawable.alunalunwonosari, R.drawable.rsudwonosari, R.drawable.bunderanpln,
                     R.drawable.ngingrong, R.drawable.simpang4trowono, R.drawable.pantaibaron, R.drawable.pantaikukup};
     @Override
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         s1 = getResources().getStringArray(R.array.area_cctv);
         s2 = getResources().getStringArray(R.array.kapanewon_cctv);
 
-        cctvAdapter CCTVAdapter = new cctvAdapter(this, s1, s2, images);
+        cctvAdapter CCTVAdapter = new cctvAdapter(this, s1, s2, link, images);
         recyclerView.setAdapter(CCTVAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }

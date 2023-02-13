@@ -12,7 +12,7 @@ import com.google.android.exoplayer2.ui.PlayerView;
 
 public class cctvView extends AppCompatActivity {
     TextView area, kapanewon;
-    PlayerView viewcctv;
+    PlayerView playerView;
     ExoPlayer exoPlayer;
 
     String data1, data2;
@@ -23,18 +23,55 @@ public class cctvView extends AppCompatActivity {
         setContentView(R.layout.activity_cctv_view);
         area = findViewById(R.id.textView);
         kapanewon = findViewById(R.id.textView2);
+
         getData();
         setData();
 
-        viewcctv = findViewById(R.id.exoplayer);
-        exoPlayer = new ExoPlayer.Builder(this).build();
-        viewcctv.setPlayer(exoPlayer);
+        if(data1.equals("Tugu Selamat Datang") && data2.equals("Kapanewon Patuk")){
+            String videoUrl = "http://103.141.234.194:8080/live/tugu-selamat-datang-patuk.flv";
 
-        String video = "http://103.141.234.194:8080/live/alun-alun-wonosari.flv";
-        MediaItem mediaItem = MediaItem.fromUri(video);
-        exoPlayer.addMediaItem(mediaItem);
-        exoPlayer.prepare();
-        exoPlayer.setPlayWhenReady(true);
+            exoPlayer = new ExoPlayer.Builder(this).build();
+            playerView = findViewById(R.id.videoexoplayer);
+            playerView.setPlayer(exoPlayer);
+            MediaItem mediaItem = MediaItem.fromUri(videoUrl);
+            exoPlayer.addMediaItem(mediaItem);
+            exoPlayer.prepare();
+            exoPlayer.setPlayWhenReady(true);
+        } else if (data1.equals("Bunderan Siyono") && data2.equals("Kapanewon Playen")){
+            String videoUrl = "http://103.141.234.194:8080/live/bunderan-siyono.flv";
+
+            exoPlayer = new ExoPlayer.Builder(this).build();
+            playerView = findViewById(R.id.videoexoplayer);
+            playerView.setPlayer(exoPlayer);
+            MediaItem mediaItem = MediaItem.fromUri(videoUrl);
+            exoPlayer.addMediaItem(mediaItem);
+            exoPlayer.prepare();
+            exoPlayer.setPlayWhenReady(true);
+        } else if (data1.equals("Alun-Alun Wonosari") && data2.equals("Kapanewon Wonosari")){
+            String videoUrl = "http://103.141.234.194:8080/live/alun-alun-wonosari.flv";
+
+            exoPlayer = new ExoPlayer.Builder(this).build();
+            playerView = findViewById(R.id.videoexoplayer);
+            playerView.setPlayer(exoPlayer);
+            MediaItem mediaItem = MediaItem.fromUri(videoUrl);
+            exoPlayer.addMediaItem(mediaItem);
+            exoPlayer.prepare();
+            exoPlayer.setPlayWhenReady(true);
+        }else if (data1.equals("Simpang 4 RSUD") && data2.equals("Kapanewon Wonosari")){
+
+        }else if (data1.equals("Bunderan PLN") && data2.equals("Kapanewon Wonosari")){
+
+        }else if (data1.equals("Ngingrong Mulo") && data2.equals("Kapanewon Wonosari")){
+
+        }else if (data1.equals("Simpang 4 Trowono") && data2.equals("Kapanewon Paliyan")){
+
+        }else if (data1.equals("Pantai Baron") && data2.equals("Kapanewon Tanjungsari")){
+
+        }else if (data1.equals("Pantai Kukup") && data2.equals("Kapanewon Tanjungsari")){
+
+        }else {
+            Toast.makeText(cctvView.this,"tidak ada cctv",Toast.LENGTH_LONG).show();
+        }
     }
     private void getData(){
         if(getIntent().hasExtra("data1") && getIntent().hasExtra("data2")){

@@ -16,15 +16,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class cctvAdapter extends RecyclerView.Adapter<cctvAdapter.cctvViewHolder> {
 
-    String data1[], data2[], data3[];
+    String data1[], data2[];
     int images[];
     Context context;
 
-    public cctvAdapter(Context ct, String s1[], String s2[], String[] link, int img[]) {
+    public cctvAdapter(Context ct, String s1[], String s2[], int img[]) {
         context = ct;
         data1 = s1;
         data2 = s2;
-        //data3 = link;
         images = img;
     }
 
@@ -48,7 +47,6 @@ public class cctvAdapter extends RecyclerView.Adapter<cctvAdapter.cctvViewHolder
                 Intent intent = new Intent(context, cctvView.class);
                 intent.putExtra("data1", data1[position]);
                 intent.putExtra("data2", data2[position]);
-                //intent.putExtra("data3", data3[position]);
                 context.startActivity(intent);
             }
         });

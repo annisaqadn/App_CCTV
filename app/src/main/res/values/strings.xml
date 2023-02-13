@@ -8,7 +8,7 @@
         <item>Simpang 4 RSUD</item>
         <item>Bunderan PLN</item>
         <item>Ngingrong Mulo</item>
-        <item>Simpang 4 Trowono</item>
+        <item>Simpang 4 Gading</item>
         <item>Pantai Baron</item>
         <item>Pantai Kukup</item>
     </string-array>
@@ -20,20 +20,8 @@
         <item>Kapanewon Wonosari</item>
         <item>Kapanewon Wonosari</item>
         <item>Kapanewon Wonosari</item>
-        <item>Kapanewon Paliyan</item>
+        <item>Kapanewon Playen</item>
         <item>Kapanewon Tanjungsari</item>
         <item>Kapanewon Tanjungsari</item>
-    </string-array>
-
-    <string-array name="video_cctv">
-        <item>http://103.141.234.194:8080/live/tugu-selamat-datang-patuk.flv</item>
-        <item>http://103.141.234.194:8080/live/bunderan-siyono.flv</item>
-        <item>http://103.141.234.194:8080/live/alun-alun-wonosari.flv</item>
-        <item>http://103.141.234.194:8080/live/bunderan-pln.flv</item>
-        <item>http://103.141.234.194:8080/live/simpang-4-rsud.flv</item>
-        <item>http://103.141.234.194:8080/live/ngingrong-mulo.flv</item>
-        <item>http://103.141.234.194:8080/live/simpang-4-trowono.flv</item>
-        <item>http://103.141.234.194:8080/live/pantai-baron.flv</item>
-        <item>http://103.141.234.194:8080/live/pantai-kukup.flv</item>
     </string-array>
 </resources>

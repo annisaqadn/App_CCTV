@@ -29,8 +29,8 @@ public class cctvView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cctv_view);
-        area = findViewById(R.id.textView);
-        kapanewon = findViewById(R.id.textView2);
+        //area = findViewById(R.id.textView);
+        //kapanewon = findViewById(R.id.textView2);
         viewcctv = findViewById(R.id.videoexoplayer);
         fullscreenButton = viewcctv.findViewById(R.id.exo_fullscreen_icon);
 
@@ -130,7 +130,8 @@ public class cctvView extends AppCompatActivity {
         }
     }
     private void setData(){
-        area.setText(data1);
-        kapanewon.setText(data2);
+        getSupportActionBar().setTitle(data1);
+        //area.setText(data1);
+        //kapanewon.setText(data2);
     }
 }

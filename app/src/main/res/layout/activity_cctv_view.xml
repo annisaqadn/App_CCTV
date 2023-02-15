@@ -5,56 +5,12 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:src="@drawable/bg_shape"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:text="Live monitoring CCTV"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:text="Alun-Alun Wonosari"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="38dp"
-        android:text="Kapanewon Wonosari"
-        android:textColor="@color/white"
-        android:textSize="16sp" />
-
     <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/videoexoplayer"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="100dp"
-        app:controller_layout_id="@layout/exoplayer_controller"
+        android:layout_height="230dp"
         android:foregroundGravity="center"
+        app:controller_layout_id="@layout/exoplayer_controller"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

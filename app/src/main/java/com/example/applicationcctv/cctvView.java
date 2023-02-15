@@ -131,6 +131,7 @@ public class cctvView extends AppCompatActivity {
     }
     private void setData(){
         getSupportActionBar().setTitle(data1);
+        getSupportActionBar().setSubtitle(data2);
         //area.setText(data1);
         //kapanewon.setText(data2);
     }

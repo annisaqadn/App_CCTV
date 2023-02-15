@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     String s1[], s2[];
     int images[] = {R.drawable.gunungkidul, R.drawable.bunderansiyono, R.drawable.alunalunwonosari, R.drawable.rsudwonosari, R.drawable.bunderanpln,
-                    R.drawable.ngingrong, R.drawable.simpanggading, R.drawable.pantaibaron, R.drawable.pantaikukup};
+                    R.drawable.ngingrong, R.drawable.manthousplayen, R.drawable.simpanggading, R.drawable.pantaibaron, R.drawable.pantaikukup};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

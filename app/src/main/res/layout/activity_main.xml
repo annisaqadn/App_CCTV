@@ -35,6 +35,7 @@
             android:layout_marginEnd="20dp"
             android:gravity="center"
             android:text="Live monitoring CCTV lalu lintas Gunungkidul"
+            android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="16sp" />
 
@@ -74,8 +75,7 @@
                 android:layout_toRightOf="@id/imgDate"
                 android:text=" Senin, 30 Januari 2023"
                 android:textColor="@color/white"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textSize="12sp" />
 
         </RelativeLayout>
 

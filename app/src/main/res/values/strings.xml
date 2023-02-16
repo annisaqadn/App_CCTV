@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CCTV</string>
+    <string name="app_name">CCTV KOMINFO Gunungkidul</string>
 
     <string-array name="area_cctv">
         <item>Tugu Selamat Datang</item>

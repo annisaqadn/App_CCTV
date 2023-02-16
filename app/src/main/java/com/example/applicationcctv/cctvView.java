@@ -17,7 +17,6 @@ import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;
 import com.google.android.exoplayer2.ui.PlayerView;
 
 public class cctvView extends AppCompatActivity {
-    TextView area, kapanewon;
     PlayerView viewcctv;
     ExoPlayer exoPlayer;
     ImageView fullscreenButton;
@@ -29,8 +28,6 @@ public class cctvView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cctv_view);
-        //area = findViewById(R.id.textView);
-        //kapanewon = findViewById(R.id.textView2);
         viewcctv = findViewById(R.id.videoexoplayer);
         fullscreenButton = viewcctv.findViewById(R.id.exo_fullscreen_icon);
 
@@ -52,7 +49,7 @@ public class cctvView extends AppCompatActivity {
 
                     RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) viewcctv.getLayoutParams();
                     params.width = params.MATCH_PARENT;
-                    params.height = (int) ( 200 * getApplicationContext().getResources().getDisplayMetrics().density);
+                    params.height = (int) ( 230 * getApplicationContext().getResources().getDisplayMetrics().density);
                     viewcctv.setLayoutParams(params);
 
                     fullscreen = false;
@@ -131,8 +128,5 @@ public class cctvView extends AppCompatActivity {
     }
     private void setData(){
         getSupportActionBar().setTitle(data1);
-        getSupportActionBar().setSubtitle(data2);
-        //area.setText(data1);
-        //kapanewon.setText(data2);
     }
 }
